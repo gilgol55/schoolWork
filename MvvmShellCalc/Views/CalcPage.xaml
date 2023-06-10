@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MvvmShellCalc.Views.CalcPage"
+             xmlns:viewModel="clr-namespace:MvvmShellCalc.ViewModels"
+             xmlns:models="clr-namespace:MvvmShellCalc.Models"
+             x:DataType="viewModel:CalcPageViewModel"
+             Title="Calculations History">
+    <VerticalStackLayout>
+        <CollectionView
+            Margin="20"
+            ItemsSource="{Binding Calulations}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:Calculation">
+                    <Border>
+                        <Label Text="{Binding .}"/>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        
+        
+
+    </VerticalStackLayout>
+</ContentPage>

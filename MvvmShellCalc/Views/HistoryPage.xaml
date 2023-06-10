@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MvvmShellCalc.Views.HistoryPage"
+             xmlns:viewModel="clr-namespace:MvvmShellCalc.ViewModels"
+             x:DataType="viewModel:HistoryPageViewModels"
+             Title="Calculator">
+    <VerticalStackLayout>
+        <Label Text="{Binding Result}" HorizontalOptions="Center" FontSize="40" />
+
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Button Text="1" Command="{Binding NumberCommand}" CommandParameter="1" Grid.Row="0" Grid.Column="0" />
+            <Button Text="2" Command="{Binding NumberCommand}" CommandParameter="2" Grid.Row="0" Grid.Column="1" />
+            <Button Text="3" Command="{Binding NumberCommand}" CommandParameter="3" Grid.Row="0" Grid.Column="2" />
+            <Button Text="+" Command="{Binding OperatorCommand}" CommandParameter="+" Grid.Row="0" Grid.Column="3" />
+
+            <Button Text="4" Command="{Binding NumberCommand}" CommandParameter="4" Grid.Row="1" Grid.Column="0" />
+            <Button Text="5" Command="{Binding NumberCommand}" CommandParameter="5" Grid.Row="1" Grid.Column="1" />
+            <Button Text="6" Command="{Binding NumberCommand}" CommandParameter="6" Grid.Row="1" Grid.Column="2" />
+            <Button Text="-" Command="{Binding OperatorCommand}" CommandParameter="-" Grid.Row="1" Grid.Column="3" />
+
+            <Button Text="7" Command="{Binding NumberCommand}" CommandParameter="7" Grid.Row="2" Grid.Column="0" />
+            <Button Text="8" Command="{Binding NumberCommand}" CommandParameter="8" Grid.Row="2" Grid.Column="1" />
+            <Button Text="9" Command="{Binding NumberCommand}" CommandParameter="9" Grid.Row="2" Grid.Column="2" />
+            <Button Text="*" Command="{Binding OperatorCommand}" CommandParameter="*" Grid.Row="2" Grid.Column="3" />
+
+            <Button Text="C" Command="{Binding ClearCommand}" Grid.Row="3" Grid.Column="0" />
+            <Button Text="0" Command="{Binding NumberCommand}" CommandParameter="0" Grid.Row="3" Grid.Column="1" />
+            <Button Text="=" Command="{Binding CalculateCommand}" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="1" />
+            <Button Text="/" Command="{Binding OperatorCommand}" CommandParameter="/" Grid.Row="3" Grid.Column="3" />
+        </Grid>
+
+
+
+
+
+    </VerticalStackLayout>
+</ContentPage>

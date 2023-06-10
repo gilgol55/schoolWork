@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MvvmShellCalc.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MvvmShellCalc"
+    xmlns:Views="clr-namespace:MvvmShellCalc.Views"
+    Shell.FlyoutBehavior="Disabled">
+    
+    <Tab Title="calculator">
+        <ShellContent
+        Title="Calculator"
+        ContentTemplate="{DataTemplate Views:HistoryPage}"
+        Route="calculatorPage" />
+    </Tab>
+    <Tab Title="history">
+        <ShellContent
+        Title="Calculation History"
+        ContentTemplate="{DataTemplate Views:CalcPage}"
+        Route="calchistoryPage" />
+    </Tab>
+
+</Shell>
